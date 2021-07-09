@@ -24,5 +24,6 @@ setup(
     python_requires='>=3.8, <4',
     project_urls={
         'Bug Reports': 'https://github.com/megamaz/pythonBaseMath/issues'
-    }
+    },
+    install_requires=["numpy"]
 )
