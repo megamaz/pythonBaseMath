@@ -13,3 +13,9 @@ class NumberOutOfBaseRange(DefaultBaseException):
 
 class CannotDivideSymbols(DefaultBaseException):
     """Gets raised when trying to divide two symbols together."""
+
+class IncorrectExpression(DefaultBaseException):
+    """Gets raied when an expression is incorrect and causes an error."""
+
+class CannotCompareDifferingBases(DefaultBaseException):
+    """Gets raised when trying to compare two numbers with differing bases."""

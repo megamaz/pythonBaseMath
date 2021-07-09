@@ -23,3 +23,22 @@ Since it's so simple -- and probably buggy at the moment -- I won't be putting i
 >>> A * 10
 '64'
 ```
+2. Math for bases smaller than 10
+```py
+>>> from BaseMath import Math
+>>> math = Math(8)
+>>> # there are many different names you could name your variables
+>>> # for math with bases smaller than 10. You could go the spelled
+>>> # version, with variables names one, two, three etc... or you
+>>> # could go with _1, _2, _3 etc... Or, you could use math.calculate.
+>>> math.calculate("1 + 5 + 7")
+'15'
+>>>
+```
+3. Binary
+```py
+>>> from BaseMath import Math
+>>> math = Math(2)
+>>> math.calculate("10110 + 10110")
+'100111011111100'
+```
