@@ -40,5 +40,5 @@ Since it's so simple -- and probably buggy at the moment -- I won't be putting i
 >>> from BaseMath import Math
 >>> math = Math(2)
 >>> math.calculate("10110 + 10110")
-'100111011111100'
+'101100'
 ```
