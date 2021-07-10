@@ -15,7 +15,7 @@ def _execWithOutput(code:str, stdout=None):
         if not stdout:
             stdout = StringIO()
         sys.stdout = stdout
-        exec(f"print({code})")
+        exec(f"r = {code}\nprint(r)")
         v = stdout.getvalue()
         sys.stdout = old
         
@@ -69,10 +69,20 @@ class Math:
         if num != "":
             numInExpression.append(num.__str__())
 
-        for n in numInExpression:
-            expression = expression.replace(n, str(int(n, self.base)))
+        newExpression = str(int(numInExpression[0], self.base))
 
-        result = _execWithOutput(expression)
+        currentInd = 0
+        expression = ''.join(expression.split())
+        for e in expression:
+            if e.upper() in values:
+                continue
+            else:
+                currentInd += 1
+                newExpression += e
+                if currentInd == len(numInExpression):
+                    break
+                newExpression += str(int(numInExpression[currentInd], self.base))
+        result = _execWithOutput(newExpression)
         return Symbol(int(result), self.base)
 
         
