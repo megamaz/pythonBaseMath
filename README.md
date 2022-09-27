@@ -31,6 +31,7 @@ Since it's so simple -- and probably buggy at the moment -[-](https://www.youtub
 >>> # for math with bases smaller than 10. You could go the spelled
 >>> # version, with variables names one, two, three etc... or you
 >>> # could go with _1, _2, _3 etc... Or, you could use math.calculate.
+>>> # /!\ math.calculate USES EXEC, THIS COULD BE A CONCERN. /!\
 >>> math.calculate("1 + 5 + 7")
 '15'
 >>>
